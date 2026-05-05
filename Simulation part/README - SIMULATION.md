@@ -17,4 +17,8 @@ To run the code seamlessly, these data must be stored as a dataframe in a file n
 - `PTFSCOM`: Return of PTFS commodity lookback straddle  
 - `RF`: Monthly risk-free rate (from the Kenneth R. French Data Library)
 
+## Steps to Run the Files
 
+1. Ensure that all files are located in the same folder (e.g., `Simulation part`).
+2. Place the `Factors.RDS` file into this folder.
+3. Run the file `Simulation Implementation.R`.

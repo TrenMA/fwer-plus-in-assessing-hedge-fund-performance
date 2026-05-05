@@ -1,6 +1,6 @@
 ################################################################################
 # number of iterations
-iter <- 5
+iter <- 1000
 ptm <- 2.5 # n_positive/n_nagative alpha which is fixed in our paper
 
 # list of seven factors

@@ -1,13 +1,13 @@
-# FWER procedure for twosided tests: fwer_twosided
+# FWER procedure for two-sided tests: fwer_twosided
 
-# This set of code follows Jun Chen's github page for FWER part of 
-# the CAMT package available at: https://github.com/jchen1981/CAMT 
-
-# We modified so that each time running we obtain results for a set 
-# of fwer targets (parameter alpha) rather than just for a single target. See line 217-223.
-
-# In solving covariate coefficient, if the solver nlm (un-constraint) encounters errors 
-# then use nlminb (constraint) instead. See lines 179 -- 188
+# This code follows Jun Chen's GitHub repository for the FWER component
+# of the CAMT package:
+# https://github.com/jchen1981/CAMT
+# Modifications:
+# - The code has been adapted to return results for a set of FWER targets
+#   (parameter alpha) in a single run, rather than a single target (see lines 217–223).
+# - When solving for covariate coefficients, if the unconstrained solver
+#   `nlm` fails, the constrained solver `nlminb` is used as a fallback (see lines 179–188).
 
 solvek.fwer <- function(pvals, pi0, init = 0.25, nlm.iter = 10, pvals.cutoff = 1e-15) {
   

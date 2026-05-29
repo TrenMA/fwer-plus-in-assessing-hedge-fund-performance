@@ -1,10 +1,56 @@
-# Replication Code for the Paper *"Assessing Hedge Fund Performance with an Information-Based Multiple Test"*
+# Assessing Hedge Fund Performance with an Information-Based Multiple Test
 
-This repository provides the code required to replicate the main simulation and empirical results reported in the paper. The materials are organized into two folders:
+This repository provides the replication code for the paper:
+
+> Hsu, P.-H., Ma, T., Psaradellis, I., and Sermpinis, G. (2025). *Assessing Hedge Fund Performance with an Information-Based Multiple Test*.
+
+**SSRN Paper:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5423519
+
+The repository contains the code used to generate the main simulation and empirical results reported in the paper.
+
+## Repository Structure
+
+The repository is organised into two main folders:
 
 * `Simulation part`
 * `Empirical part`
 
-Both folders contain the necessary code and data files to ensure that users can run the programs smoothly and reproduce the results.
+### `Simulation part`
 
-To get started, open the relevant folder and follow the instructions provided in its README file.
+This folder contains the code used to generate the simulation results presented in the paper.
+
+Detailed instructions are provided in the corresponding README file within the folder.
+
+### `Empirical part`
+
+This folder contains the code used to generate the empirical results reported in the paper.
+
+Detailed instructions are provided in the corresponding README file within the folder.
+
+## Requirements
+
+The code is written in R and is designed to run in RStudio.
+
+Before running the scripts, please ensure that all required R packages are installed.
+
+## Data Availability
+
+This repository includes the necessary simulated data files in both the `Simulation part` and `Empirical part` folders. These simulated data are provided solely to enable users to run the code smoothly; they are not intended to reproduce the results reported in the paper.
+
+The original empirical data used in the paper were obtained from commercial data providers and cannot be redistributed. Consequently, the results generated using the simulated data will not match those reported in the paper.
+
+Researchers wishing to reproduce the empirical results reported in the paper must obtain the original data from the relevant commercial data providers (see Data section of the paper) and replace the simulated data files accordingly.
+
+## Reproducibility
+
+The repository provides the full code used in the analysis. Each folder contains a dedicated README file with detailed instructions for running the scripts and generating the corresponding outputs.
+
+## Citation
+
+If you use the code or results from this repository, please cite:
+
+> Hsu, P.-H., Ma, T., Psaradellis, I., and Sermpinis, G. (2025). *Assessing Hedge Fund Performance with an Information-Based Multiple Test*. Working Paper.
+
+## Contact
+
+Questions regarding the code should be directed to Tren Ma at [tren.ma@nottingham.ac.uk](mailto:tren.ma@nottingham.ac.uk).

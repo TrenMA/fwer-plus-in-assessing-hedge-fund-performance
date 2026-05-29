@@ -45,8 +45,10 @@ pi0Z <- function(Z,b,form = 'logistic',pi0 = NULL){
   pi0z
 }
 
-Simulated_Data_Generator <- function(number_of_funds,alpha_real,m_sigma_hat,
-                                     serial_correlated_epsilon=FALSE,TimeLength,PA_only = TRUE){
+Simulated_Data_Generator <- function(number_of_funds,alpha_real,
+                                     m_sigma_hat,
+                                     TimeLength,
+                                     PA_only = TRUE){
   # Return: simulated estimate alpha and its p-value
   #         for all funds
   # Inputs: obs_per_fund could be given or will be assigned as unbalanced type (will consider in later steps)
@@ -60,15 +62,11 @@ Simulated_Data_Generator <- function(number_of_funds,alpha_real,m_sigma_hat,
   ds <- list()
   ds_ret <- list()
   for (i in 1:number_of_funds) {
-    if (!serial_correlated_epsilon) {
-      epsilon <- rnorm(obs_per_fund,mean = 0,sd = m_sigma_hat)
-    }else{
-      # will be updated later
-      epsilon <- rnorm(obs_per_fund,mean = 0,sd = m_sigma_hat)
-    }
+    epsilon <- rnorm(obs_per_fund,mean = 0,sd = m_sigma_hat)
     ERet <- alpha_real[i] +  as.matrix(Factors_simulate) %*% t(as.matrix(beta_simulate[i,])) + epsilon
     dfi <- data.frame(ERet,Factors_simulate)
     ds_ret[[i]] <- dfi
+    # since in this simulation, epsilon is iid, we use simple regression p-value 
     reg_model <- lm(ERet ~ ., data =  dfi)  
     sum_model <- summary(reg_model)
     
@@ -98,7 +96,7 @@ Factors_beta_simulate <- function(TimeLength,number_of_funds){
 }
 
 
-omega_mu_hat <- function(d,q=1/10,studentized = TRUE){
+omega_mu_hat <- function(d,q,studentized = TRUE){
   # returns the std of a vector d and inverse of block length
   #  inputs: d
   n <- length(d)
@@ -120,7 +118,7 @@ omega_mu_hat <- function(d,q=1/10,studentized = TRUE){
 }
 
 
-omega_hat <- function(d,q=1/10){
+omega_hat <- function(d,q){
   # returns the std of a vector d and inverse of block length
   #  inputs: d
   n <- length(d)
@@ -132,7 +130,7 @@ omega_hat <- function(d,q=1/10){
   om
 }
 
-step_spa <- function(ds,q=0.1,targets = seq(0.005,0.1,0.005),obs_per_fund,studentized = TRUE,parallel = TRUE){
+step_spa <- function(ds,q,targets = seq(0.005,0.1,0.005),obs_per_fund,studentized = TRUE,parallel = TRUE){
   
   dt_calculator <- function(ds,Bindex){
     
@@ -258,7 +256,7 @@ step_spa <- function(ds,q=0.1,targets = seq(0.005,0.1,0.005),obs_per_fund,studen
 library("sandwich")
 library(lmtest)
 
-stepM <- function(ds,q=0.1,targets = seq(0.005,0.1,0.005),obs_per_fund,studentized = TRUE,parallel = TRUE){
+stepM <- function(ds,q,targets = seq(0.005,0.1,0.005),obs_per_fund,studentized = TRUE,parallel = TRUE){
   
   dt_calculator <- function(ds,Bindex){
     

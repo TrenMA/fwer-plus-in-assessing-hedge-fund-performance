@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "Assessing Hedge Fund Performance with an Information-Based Multiple Test"
+message: "If you use this repository, please cite the associated paper."
+type: software
+
+authors:
+
+* family-names: Hsu
+  given-names: Po-Hsuan
+* family-names: Ma
+  given-names: Tren
+* family-names: Psaradellis
+  given-names: Ioannis
+* family-names: Sermpinis
+  given-names: Georgios
+
+repository-code: "https://github.com/TrenMA/fwer-plus-in-assessing-hedge-fund-performance"
+
+preferred-citation:
+type: article
+authors:
+- family-names: Hsu
+given-names: Po-Hsuan
+- family-names: Ma
+given-names: Tren
+- family-names: Psaradellis
+given-names: Ioannis
+- family-names: Sermpinis
+given-names: Georgios
+title: "Assessing Hedge Fund Performance with an Information-Based Multiple Test"
+year: 2025
+url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5423519"

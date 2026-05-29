@@ -33,7 +33,7 @@ The code is written in R and is designed to run in RStudio.
 
 Before running the scripts, please ensure that all required R packages are installed.
 
-## Simulated data
+## Simulated Data
 
 This repository includes the necessary simulated data files in both the `Simulation part` and `Empirical part` folders. These simulated data are provided solely to enable users to run the code smoothly; they are not intended to reproduce the results reported in the paper.
 

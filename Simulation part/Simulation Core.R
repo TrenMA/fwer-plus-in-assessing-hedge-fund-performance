@@ -6,20 +6,8 @@ ptm <- 2.5 # n_positive/n_nagative alpha which is fixed in our paper
 # list of seven factors
 factors_list <- c('EQ','Size','CS','DGS10C','PTFSBD','PTFSFX','PTFSCOM')
 
-# File Factors.RDS contains
-# Date: YYYYMM
-# EQ: Equity Market Factor
-# Size: The Size Spread Factor
-# DGS10C: The Bond Market Factor
-# CS: The Credit Spread Factor
-# PTFSBD: Return of PTFS Bond lookback straddle
-# PTFSFX: Return of PTFS Currency Lookback Straddle
-# PTFSCOM:Return of PTFS Commodity Lookback Straddle
-# see https://people.duke.edu/~dah7/HFRFData.htm
-# RF: monthly risk-free rate obtained from Kenneth R. French - Data Library
-# https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
-
-Factors <- readRDS('Factors.RDS') %>% 
+# 
+Factors <- readRDS('Fake Factors.RDS') %>% 
   as_tibble() %>% 
   filter(Date <= '202312' & Date >= '199701') %>%
   select(Date, all_of(factors_list),RF)

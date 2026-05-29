@@ -8,7 +8,7 @@ dfs0 <- list()
 l <- 1
 n_funds <- 1000
 TimeLength <- 36
-for (k in c(10,100,200)) {
+for (k in c(10,100,500)) {
   i <- 1
   dfs <- list()
   for (rho in c(0,0.25,0.5,0.75,0.9)) {

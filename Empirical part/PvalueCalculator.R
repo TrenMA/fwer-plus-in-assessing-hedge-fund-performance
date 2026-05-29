@@ -109,8 +109,7 @@ pvalue_calculator <- function(bg,ed){
                       ISStart = dfi$Date[1],
                       ISEnd = tail(dfi$Date,1),
                       sample_size = dim(dfi)[1],
-                      pvalue = model_coef[1,4],
-                      pvalueNW = NW[1,4],
+                      pvalue = NW[1,4],
                       tstat = NW[1,3],
                       alpha  = model_coef[1,1],
                       model_rsq  = model_sum$r.squared)

@@ -46,6 +46,8 @@ n_factors <- 7
 # first we calculate p-value and covariates for 7-factor model
 # results for this step are stored in the folder pvalue_covariates_folder
 
+setwd(Empirical_folder)
+
 source('PvalueCalculator.R')
 
 source('CovariatesCalculator.R')

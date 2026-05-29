@@ -57,7 +57,7 @@ q_stepM <- q_spa <- 1/6;
 # otherwise you can set mc.cores <- parallel::detectCores() - 2 
 mc.cores <- 32
 
-source('Simulation Core.R')  # FYI: for mc.cores = 20, it takes around 20 hours for this line to complete.
+source('Simulation Core.R')  # FYI: for mc.cores = 32, it takes around 30 hours for this line to complete.
 
 source('Plot - Performance comparison among fwer plus StepM and StepSPA under varying alpha.R')
 

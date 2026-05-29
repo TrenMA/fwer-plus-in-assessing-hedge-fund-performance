@@ -37,7 +37,7 @@ Before running the scripts, please ensure that all required R packages are insta
 
 This repository includes the necessary simulated data files in both the `Simulation part` and `Empirical part` folders. These simulated data are provided solely to enable users to run the code smoothly; they are not intended to reproduce the results reported in the paper.
 
-The original empirical data used in the paper were obtained from commercial data providers and publicly available datasets maintained by other researchers. These data are not distributed through this repository. Consequently, the results generated using the simulated data will not match those reported in the paper.
+The original data used in the paper were obtained from commercial data providers and publicly available datasets maintained by other researchers. These data are not distributed through this repository. Consequently, the results generated using the simulated data will not match those reported in the paper.
 
 Researchers wishing to reproduce the empirical results reported in the paper must obtain the original data from the relevant commercial data providers (see Data section of the paper) and replace the simulated data files accordingly.
 

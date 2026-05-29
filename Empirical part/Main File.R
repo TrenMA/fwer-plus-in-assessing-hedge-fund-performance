@@ -90,6 +90,10 @@ Holding_horizon <- 1 #years
 for (n_factors in c(4,6,9,'Chen_9Factor')) {
   
   setwd(Empirical_folder)
+  # calculate p-value and covariate
+  source('PvalueCalculator.R')
+
+  source('CovariatesCalculator.R')  
   
   source('Core code for fwer plus using all covariates.R')
 }

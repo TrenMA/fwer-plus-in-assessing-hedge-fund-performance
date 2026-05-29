@@ -1,8 +1,5 @@
 rm(list = ls())
 
-# Note: This file utilizes covariates and p-value of all factor models
-# To produce them, you need to run two files "Covariates.R" and "PvalueCalculator.R"
-
 library(lmtest)
 library(sandwich)
 library(FinTS)
@@ -10,9 +7,9 @@ library(dplyr)
 library(qvalue)
 library(xtable)
 
-n_factors <- 7
+Empirical_folder <- "input the path to your 'Empirical part' folder here"
 
-Empirical_folder <- "C:/Users/User/Dropbox/Hedge fund project/Data and Code for Gihub - Empirical - clean version"
+n_factors <- 7
 
 results_folder <- paste(Empirical_folder,'/', 'Results',sep = '')
 
@@ -26,9 +23,10 @@ tables_figures_folder <- paste(results_folder,'/', 'tables and figures',sep = ''
 
 if (!dir.exists(tables_figures_folder)){dir.create(tables_figures_folder)}
 
-
 BS <- seq(199701,202101,100) # start date of in-samples
 ES <- seq(199912,202312,100) # end date of in-samples
+
+setwd(Empirical_folder)
 
 source('FWER Procedure.R')
 
@@ -114,8 +112,6 @@ for (k in 2:ncol(pc)) {
 }
 
 pc <- pc %>% as_tibble()
-
-target_set <- c(0.001,0.005,0.01,0.05)
 
 characteristics_covs <- c('FundSize',
                           'IncentiveFee',

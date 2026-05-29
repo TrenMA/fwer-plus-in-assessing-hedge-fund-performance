@@ -6,6 +6,8 @@ This repository provides the replication code for the paper:
 
 **SSRN Paper:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5423519
 
+The `fwer+` (family-wise error rate plus) procedure is an information-based multiple testing method for evaluating hedge fund performance while controlling the family-wise error rate. This repository contains the code used to generate the main simulation and empirical results reported in the paper.
+
 The repository contains the code used to generate the main simulation and empirical results reported in the paper.
 
 ## Repository Structure

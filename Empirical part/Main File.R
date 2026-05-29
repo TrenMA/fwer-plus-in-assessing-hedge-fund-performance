@@ -1,8 +1,5 @@
 rm(list = ls())
 
-# Note: This file utilizes covariates and p-value of all factor models
-# To produce them, you need to run two files "Covariates.R" and "PvalueCalculator.R"
-
 library(lmtest)
 library(sandwich)
 library(FinTS)
@@ -10,7 +7,7 @@ library(dplyr)
 library(qvalue)
 library(xtable)
 
-Empirical_folder <- "input the path to your Empirical part folder here"
+Empirical_folder <- "input the path to your 'Empirical part' folder here"
 
 # create a folder in Empirical_folder named "Results" for result ouput
 

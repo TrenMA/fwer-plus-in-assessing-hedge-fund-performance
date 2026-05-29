@@ -43,7 +43,7 @@ Researchers wishing to reproduce the empirical results reported in the paper mus
 
 ## Citation
 
-If you use the code or results from this repository, please cite:
+If you use the code from this repository, please cite:
 
 > Hsu, P.-H., Ma, T., Psaradellis, I., and Sermpinis, G. (2025). *Assessing Hedge Fund Performance with an Information-Based Multiple Test*. Working Paper.
 

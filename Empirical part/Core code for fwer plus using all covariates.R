@@ -840,14 +840,18 @@ if (n_factors == 7 & Holding_horizon == 1) {
     
     df_temp <- alpha_fund_selected[[i]]
     
-    df_whole[[i]] <- df_temp %>% summarise(target = target[1]*100,
-                                           n_fund = mean(n_fund),
-                                           retention_rate = 100 - mean(n_delist/n_fund)*100,
-                                           # out-performance rate among funds with full return 
-                                           pos_alpha_ex_delist_rate = mean(positive_alpha_rate_ex_delist,na.rm = TRUE)*100,
-                                           # out-performance rate among all funds selected 
-                                           pos_alpha_delist_rate_all = mean(positive_alpha_ex_delist/n_fund)*100
-    )
+    df_whole[[i]] <- df_temp %>% 
+      
+      mutate(retention_prop = 1 - n_delist/n_fund,
+             positive_eret_prop = positive_eret/n_fund) %>%
+      summarise(target = target[1]*100,
+                n_fund = mean(n_fund),
+                retention_rate = mean(retention_prop)*100,
+                # out-performance rate among funds with full return 
+                pos_alpha_ex_delist_rate = mean(positive_alpha_rate_ex_delist,na.rm = TRUE)*100,
+                # out-performance rate among all funds selected one 
+                pos_eret_rate_all = mean(positive_eret_prop)*100
+      )
     
   }
   

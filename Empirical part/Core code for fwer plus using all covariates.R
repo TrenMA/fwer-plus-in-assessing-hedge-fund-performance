@@ -136,7 +136,7 @@ for (k in seq(from = 1,to = length(ES)-1, by = Holding_horizon)) {
   # collect only fund with in-sample end at ES[k]:
   df <- pc %>% filter(ISEnd == ES[k]) 
   
-  df <- df %>% select(Name,pvalueNW,alpha,aum,any_of(cov_set)) %>% 
+  df <- df %>% select(Name,pvalue,alpha,aum,any_of(cov_set)) %>% 
     na.omit() %>%
     filter(aum > 0)
   
@@ -157,7 +157,7 @@ for (k in seq(from = 1,to = length(ES)-1, by = Holding_horizon)) {
   
   # fwer+ starts
   
-  fwer <- fwer_twosided(pvals = df$pvalueNW,pi0.var = pi0.var,alpha = target_set)
+  fwer <- fwer_twosided(pvals = df$pvalue,pi0.var = pi0.var,alpha = target_set)
   
   funds_selected <- list()
   

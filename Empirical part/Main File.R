@@ -94,7 +94,8 @@ for (n_factors in c(4,6,9,'Chen_9Factor')) {
   source('PvalueCalculator.R')
 
   source('CovariatesCalculator.R')  
-  
+
+  setwd(Empirical_folder)
   source('Core code for fwer plus using all covariates.R')
 }
 ################################################################################

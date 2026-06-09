@@ -1,6 +1,6 @@
 
-include_spa <- TRUE; q_spa <- 0.9
-include_stepM <- TRUE; q_stepM <- 0.9
+include_spa <- TRUE
+include_stepM <- TRUE
 
 rho <- 0
 n_funds <- 1000

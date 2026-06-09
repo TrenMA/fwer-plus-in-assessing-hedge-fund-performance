@@ -1,6 +1,6 @@
 # Assessing Hedge Fund Performance with an Information-Based Multiple Test
 
-This repository contains the code and example data required to reproduce the simulation and empirical analyses presented in:
+This repository provides the replication code for the paper:
 
 > Hsu, P.-H., Ma, T., Psaradellis, I., and Sermpinis, G. (2025). *Assessing Hedge Fund Performance with an Information-Based Multiple Test*.
 

@@ -1,14 +1,12 @@
 # Assessing Hedge Fund Performance with an Information-Based Multiple Test
 
-This repository provides the replication code for the paper:
+This repository contains the code and example data required to reproduce the simulation and empirical analyses presented in:
 
 > Hsu, P.-H., Ma, T., Psaradellis, I., and Sermpinis, G. (2025). *Assessing Hedge Fund Performance with an Information-Based Multiple Test*.
 
 **SSRN Paper:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5423519
 
-The `fwer+` (family-wise error rate plus) procedure is an information-based multiple testing method for picking outperformers while controlling the family-wise error rate. This repository contains the code used to generate the main simulation and empirical results reported in the paper. This repository contains the code used to generate the main simulation and empirical results reported in the paper.
-
-## Repository Structure
+The paper introduces **FWER+** (Family-Wise Error Rate Plus), an information-based multiple testing procedure designed to identify outperforming funds while controlling the family-wise error rate. By incorporating informative covariates into the testing framework, the method improves the ability to distinguish genuinely skilled funds from those that appear successful due to chance.
 
 The repository is organised into two main folders:
 
@@ -17,13 +15,13 @@ The repository is organised into two main folders:
 
 ### `Simulation part`
 
-This folder contains the code used to generate the simulation results presented in the paper.
+This folder contains the code used to generate the simulation results presented in the paper, including the evaluation of the finite-sample properties of the fwer+ procedure under a range of data-generating processes.
 
 Detailed instructions are provided in the corresponding README file within the folder.
 
 ### `Empirical part`
 
-This folder contains the code used to generate the empirical results reported in the paper.
+This folder contains the code used to generate the empirical hedge fund results reported in the paper, including fund selection, portfolio construction, and performance evaluation using the fwer+ procedure.
 
 Detailed instructions are provided in the corresponding README file within the folder.
 

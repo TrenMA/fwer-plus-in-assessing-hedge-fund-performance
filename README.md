@@ -6,7 +6,7 @@ This repository provides the replication code for the paper:
 
 **SSRN Paper:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5423519
 
-The paper introduces **fwer+** (family-wise error rate plus), an information-based multiple testing procedure designed to identify outperforming funds while controlling the family-wise error rate. By incorporating informative covariates into the testing framework, the method improves the ability to distinguish genuinely skilled funds from those that appear successful due to chance.
+The paper introduces **fwer+** (family-wise error rate plus), an information-based multiple testing procedure designed to identify outperforming funds while controlling the family-wise error rate. By incorporating informative covariates into the testing framework, the method improves the ability to distinguish genuinely outperforming funds from those that appear successful due to chance.
 
 The repository is organised into two main folders:
 

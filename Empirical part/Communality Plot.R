@@ -38,7 +38,7 @@ if (n_factors == 'Chen_9Factor') {
   
   factors_list <- c("MKT", "AGR", "BAB", "LRSK", "ROA", "TSMOM", "X10Y", "CRDT", "TRM")
   
-  factors <- readRDS('Chen Nine factors.RDS')%>% 
+  factors <- readRDS('Fake Chen Nine factors.RDS')%>% 
     filter(Date >= oos_bg_date & Date <= oos_end_date) %>%  
     select(Date,any_of(factors_list),RF) %>%
     as_tibble()
